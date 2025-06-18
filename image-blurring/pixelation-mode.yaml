@@ -15,7 +15,7 @@ appId: io.kahf.browser
       text: "Man: Should not Blur"  # or id: "element_id"
     timeout: 10000 
 
-#Image blurring: Default pixelation mode with cover face
+#Image blurring: Default pixelation mode with cover face//
 - tapOn: 
       id: "io.kahf.browser:id/kahfSettingsButton"
 - tapOn:
