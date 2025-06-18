@@ -1,0 +1,22 @@
+config:
+  android:
+    adbPort: 7002
+appId: io.kahf.browser
+---
+- launchApp
+- runFlow: "../onboarding.yaml"
+#Image blurring: Grey mode without cover face
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn:
+      id: "io.kahf.browser:id/ivBlurGrey"
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "https://sites.google.com/kahf.co/safegaze/automation"
+- pressKey: "ENTER"
+
+#Image blurring: Grey mode with cover face
+- tapOn: 
+      id: "io.kahf.browser:id/switchCoverFace"
+#- tapOn:
+      #id: "io.kahf.browser:id/switch_safe_gaze"

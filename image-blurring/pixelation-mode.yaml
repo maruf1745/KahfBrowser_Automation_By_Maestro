@@ -1,0 +1,22 @@
+config:
+  android:
+    adbPort: 7002
+appId: io.kahf.browser
+---
+- launchApp
+- runFlow: "../onboarding.yaml"
+#Image blurring: Default pixelation mode without cover face
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "https://sites.google.com/kahf.co/safegaze/automation"
+- pressKey: "ENTER"
+- scrollUntilVisible:
+    element:
+      text: "Man: Should not Blur"  # or id: "element_id"
+    timeout: 10000 
+
+#Image blurring: Default pixelation mode with cover face
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn:
+      id: "io.kahf.browser:id/switchCoverFace"

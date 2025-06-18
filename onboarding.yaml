@@ -1,0 +1,20 @@
+appId: io.kahf.browser
+---
+- launchApp
+- tapOn: "Let's Go"
+- tapOn: "Skip"
+- tapOn: 
+      id: "io.kahf.browser:id/rootView" # YouTube
+      index: 0
+- tapOn: 
+      id: "io.kahf.browser:id/rootView" # FaceBook
+      index: 1
+- tapOn: 
+      id: "io.kahf.browser:id/rootView" # X
+      index: 2
+- tapOn: 
+      id: "io.kahf.browser:id/rootView" # Gmail
+      index: 3
+- tapOn: "Next"
+#- assertVisible: "Device is compatible."
+- tapOn: "Enable Image Blurring"

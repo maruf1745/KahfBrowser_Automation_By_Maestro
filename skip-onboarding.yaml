@@ -1,0 +1,7 @@
+appId: io.kahf.browser
+---
+- launchApp
+- tapOn: "Let's Go"
+- tapOn: "Skip"
+- tapOn: "Skip for now"
+- tapOn: "Skip"
