@@ -1,5 +1,6 @@
 appId: io.kahf.browser
 ---
+- clearState: io.kahf.browser
 - launchApp
 - tapOn: "Let's Go"
 - tapOn: "Skip"
@@ -15,6 +16,8 @@ appId: io.kahf.browser
 - tapOn: 
       id: "io.kahf.browser:id/rootView" # Gmail
       index: 3
+- tapOn: 
+      id: "io.kahf.browser:id/rootView" # Gmail
+      index: 4
 - tapOn: "Next"
-#- assertVisible: "Device is compatible."
 - tapOn: "Enable Image Blurring"

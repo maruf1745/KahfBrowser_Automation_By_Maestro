@@ -1,0 +1,31 @@
+appId: io.kahf.browser
+---
+- launchApp
+- runFlow: "onboarding.yaml"
+#Site Blocking: Default Medium Mode
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "http://pornhub.com/"
+- pressKey: "ENTER"
+
+#Site Blocking: High Mode
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn: 
+      id: "io.kahf.browser:id/btnContainer" 
+      index: 0
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "https://bc.game/" 
+- pressKey: "ENTER"
+
+#Site Blocking: Low Mode
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn: 
+      id: "io.kahf.browser:id/btnContainer" 
+      index: 2
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "https://chat.com/"
+- pressKey: "ENTER"

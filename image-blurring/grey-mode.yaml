@@ -1,6 +1,3 @@
-config:
-  android:
-    adbPort: 7002
 appId: io.kahf.browser
 ---
 - launchApp
@@ -17,6 +14,8 @@ appId: io.kahf.browser
 
 #Image blurring: Grey mode with cover face
 - tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn:
       id: "io.kahf.browser:id/switchCoverFace"
 #- tapOn:
       #id: "io.kahf.browser:id/switch_safe_gaze"

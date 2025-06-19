@@ -2,17 +2,17 @@ appId: io.kahf.browser
 ---
 - launchApp
 - runFlow: "../onboarding.yaml"
-#Image blurring: Default pixelation mode without cover face
 - tapOn:
       id: "io.kahf.browser:id/omnibarTextInput"
 - inputText: "https://sites.google.com/kahf.co/safegaze/automation"
 - pressKey: "ENTER"
-#- scrollUntilVisible:
-#    element:
-#      text: "Men: Should not Blur"  
- #   timeout: 10000 
-#Image blurring: Default pixelation mode with cover face//
+#Pause blurring for the current visited site
 - tapOn: 
       id: "io.kahf.browser:id/kahfSettingsButton"
 - tapOn:
-      id: "io.kahf.browser:id/switchCoverFace"
+      id: "io.kahf.browser:id/btnToggleSiteBlur"
+#Resume blurring for the current visited site
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn:
+      id: "io.kahf.browser:id/btnToggleSiteBlur"

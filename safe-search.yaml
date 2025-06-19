@@ -1,0 +1,31 @@
+appId: io.kahf.browser
+---
+- launchApp
+- runFlow: "onboarding.yaml"
+#Safe Search: Default Medium Mode(Harmful content should not visible)
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "Porn"
+- pressKey: "ENTER"
+
+#Safe Search: High Mode(Harmful content should not visible)
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn: 
+      id: "io.kahf.browser:id/btnContainer" 
+      index: 0
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "Porn" 
+- pressKey: "ENTER"
+
+#Safe Search: Low Mode(Harmful content will visible)
+- tapOn: 
+      id: "io.kahf.browser:id/kahfSettingsButton"
+- tapOn: 
+      id: "io.kahf.browser:id/btnContainer" 
+      index: 2
+- tapOn:
+      id: "io.kahf.browser:id/omnibarTextInput"
+- inputText: "Porn"
+- pressKey: "ENTER"
